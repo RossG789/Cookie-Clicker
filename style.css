@@ -1,3 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 * {
+  background-color: #f5ebe0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "caveat", cursive;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Grid styling */
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.title,
+.cookie-image,
+.cookies-clicked {
+  margin: 20px;
+}
+
+.upgrades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cookiepng {
+  border: 10px solid black;
+  border-radius: 50%;
+  height: 200px;
+}
+.cookiepng:hover {
   background-color: cornsilk;
+  cursor: pointer;
+}
+
+.title {
+  padding: 10px;
+  border: 4px solid black;
+  border-radius: 8px;
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.cookies-clicked {
+  padding: 10px;
+  border-radius: 10px;
+  border: 4px solid black;
+  grid-area: 4 / 1 / 5 / 3;
+}
+
+/* Buttons */
+.btn {
+  background-color: bisque;
+  padding: 10px;
+  border: 4px solid burlywood;
+  margin: 5px;
+  font-size: 1.3rem;
+  border-radius: 8px;
+}
+
+.upgrades li {
+  font-size: 1.3rem;
+}
+
+.cost h3 {
+  font-size: 1.5rem;
+}
+
+.upgrades {
+  padding: 20px;
+  border: 4px solid black;
+  border-radius: 8px;
+}
+
+.upgrades h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
 }
