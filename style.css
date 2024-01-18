@@ -34,9 +34,37 @@
   border-radius: 50%;
   height: 200px;
 }
+
+@keyframes wiggle {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
 .cookiepng:hover {
-  background-color: cornsilk;
+  background-color: #d4a373;
   cursor: pointer;
+  animation: wiggle 2s ease-in infinite;
 }
 
 .title {
@@ -47,6 +75,10 @@
 }
 
 .cookies-clicked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
   padding: 10px;
   border-radius: 10px;
   border: 4px solid black;
@@ -63,8 +95,12 @@
   border-radius: 8px;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .upgrades li {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .cost h3 {
