@@ -5,12 +5,14 @@
 // Second Interval and Insertion function
 let cookies = 0;
 
-setInterval(function () {
-  cookies += 1;
-  document.getElementById("counted-cookies").innerHTML = cookies;
-  localStorage.setItem("localCookies", cookies);
-  console.log("cookies stored");
-}, 1000);
+document.body.onload = function startGame() {
+  getCookies();
+  setInterval(function () {
+    cookies += 1;
+    document.getElementById("counted-cookies").innerHTML = cookies;
+    localStorage.setItem("localCookies", cookies);
+  }, 1000);
+};
 
 let cookieClick = document.getElementById("cookie");
 
@@ -29,10 +31,7 @@ function handleCookies(event) {
 }
 
 function getCookies() {
-  const localCookies = localStorage.getItem("localCookies");
-  document.getElementById("counted-cookies").innerHTML = localCookies;
-
-  console.log(localCookies);
+  cookies = JSON.parse(localStorage.getItem("localCookies"));
 }
 
-getCookies(cookies);
+// getCookies();
