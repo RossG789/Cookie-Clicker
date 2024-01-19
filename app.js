@@ -1,3 +1,7 @@
+// cookieClick.classList.remove("cookieanim"); // reset animation
+// void element.offsetWidth; // trigger reflow
+// cookieClick.classList.add("cookieanim"); // start animation
+
 // Second Interval and Insertion function
 let cookies = 0;
 setInterval(function () {
@@ -14,6 +18,9 @@ cookieClick.addEventListener("click", handleCookies);
 // Checking to see if cookiesCliked = to multiplier cost
 
 function handleCookies(event) {
+  cookieClick.classList.remove("cookieanim"); // reset animation
+  void cookieClick.offsetWidth; // trigger reflow
+  cookieClick.classList.add("cookieanim"); // start animation
   cookies += 1;
   event.preventDefault();
   localStorage.setItem("localCookies", cookies);

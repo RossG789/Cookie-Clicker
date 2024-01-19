@@ -72,7 +72,10 @@
 .cookiepng:hover {
   background-color: #d4a373;
   cursor: pointer;
-  animation: wiggle 2s ease-in infinite;
+}
+
+.cookieanim {
+  animation: wiggle 1s ease-in;
 }
 
 .title {
