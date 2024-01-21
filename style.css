@@ -6,6 +6,7 @@
   font-family: "karla", serif;
   text-decoration: none;
   list-style: none;
+  overflow: hidden;
 }
 
 /* Grid styling */
@@ -122,6 +123,18 @@
 
 .btn:hover {
   cursor: pointer;
+}
+
+#reset-button {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+}
+
+#reset-button:hover {
+  color: whitesmoke;
+  background-color: burlywood;
+  border-color: bisque;
 }
 
 .upgrades li {
